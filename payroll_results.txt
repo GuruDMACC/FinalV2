@@ -1,6 +1,6 @@
 Employee ID: 1		 Name: Bob Camden				 Net pay:  $0.0
-Employee ID: 2		 Name: Jill Thomas				 Net pay:  $191.66666666666669
-Employee ID: 3		 Name: Mary Green				 Net pay:  $947.9166666666667
+Employee ID: 2		 Name: Jill Thomas				 Net pay:  $105.41666666666667
+Employee ID: 3		 Name: Mary Green				 Net pay:  $0.0
 Employee ID: 4		 Name: Gus O'Toole				 Net pay:  $0.0
 Employee ID: 5		 Name: Manuel Cortez				 Net pay:  $0.0
 Employee ID: 6		 Name: Jim Thompson				 Net pay:  $0.0

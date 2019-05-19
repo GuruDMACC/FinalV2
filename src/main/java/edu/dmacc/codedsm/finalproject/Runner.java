@@ -14,7 +14,7 @@ public class Runner {
         EmployeeRepository repository= new EmployeeRepository(); // should only have one repository
         EmployeeService service= new EmployeeServiceImpl(repository); // should only have one repository
         EmployeeController employeeController = new EmployeeControllerImpl(service);
-        PayrollController payrollController = new PayrollControllerImpl();
+        PayrollController payrollController = new PayrollControllerImpl(repository);
         DataLoadController dataLoadController = new DataLoadControllerImpl(repository);
         dataLoadController.load();
 
@@ -37,7 +37,7 @@ public class Runner {
             if (response.equals("4")) {
                 isRunning = false;
             } else if (response.equals("3")) {
-                payrollController.processPayroll(repository);
+                payrollController.processPayroll();
                 isRunning = false;
             } else if (response.equals("2")) {
                 System.out.print("Employee ID: ");

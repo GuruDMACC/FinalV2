@@ -9,7 +9,8 @@ import edu.dmacc.codedsm.finalproject.view.AllEmployeeView;
 import java.util.List;
 
 public class EmployeeControllerImpl implements EmployeeController {
-        EmployeeService employeeService;
+	
+    private   EmployeeService employeeService;
 
     public EmployeeControllerImpl(EmployeeService employeeService) {
         this.employeeService = employeeService;

@@ -5,10 +5,19 @@ import edu.dmacc.codedsm.finalproject.service.PayrollService;
 import edu.dmacc.codedsm.finalproject.service.PayrollServiceImpl;
 
 public class PayrollControllerImpl implements PayrollController {
-    PayrollService payrollService = new PayrollServiceImpl();
+	
+    private PayrollService payrollService = new PayrollServiceImpl();
+    private EmployeeRepository employees;
 
-    @Override
-    public void processPayroll(EmployeeRepository employees) {
+    
+
+	public PayrollControllerImpl(EmployeeRepository employees) {
+		super();
+		this.employees = employees;
+	}
+
+	@Override
+    public void processPayroll() {
         payrollService.processPayroll(employees);
         savePayrollToFile(employees);
     }
@@ -16,5 +25,7 @@ public class PayrollControllerImpl implements PayrollController {
     private void savePayrollToFile(EmployeeRepository employees) {
         payrollService.savePayrollToFile(employees);
     }
+
+	 
 };
 
